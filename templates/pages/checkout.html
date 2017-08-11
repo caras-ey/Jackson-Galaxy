@@ -2,6 +2,7 @@
 
 {{{ checkout.checkout_head }}}
 {{{ stylesheet '/assets/css/optimized-checkout.css' }}}
+
 {{ getFontsCollection }}
 
 <script type="text/javascript">
@@ -11,7 +12,8 @@
 {{/partial}}
 
 {{#partial "page"}}
-<header class="checkoutHeader optimizedCheckout-header">
+{{> components/common/co-header}}
+<!--<header class="checkoutHeader optimizedCheckout-header">
     <div class="checkoutHeader-content">
         <h1 class="is-srOnly">{{lang 'checkout.title'}}</h1>
         <h2 class="checkoutHeader-heading">
@@ -24,9 +26,10 @@
             </a>
         </h2>
     </div>
-</header>
+</header>-->
 
 {{{ checkout.checkout_content }}}
+{{> components/common/co-footer}}
 
 {{/partial}}
 

@@ -16,10 +16,20 @@ product:
         {{> components/common/alert-info message}}
     {{/each}}
 
-    <div itemscope itemtype="http://schema.org/Product">
-        {{> components/products/product-view schema=true}}
+    <div id="AdvIP" itemscope itemtype="http://schema.org/Product">
+        {{> components/products/product-view-advanced schema=true}}
 
         <div class="product-details-bottom">
+        {{#if product.warranty}}
+         <div class="jg-tip">
+             <div class="container">
+             <h3><img src="{{cdn 'assets/img/ey-images/jg-footer-logo.png'}}" alt="" width="145">Jackson Galaxy Tip</h3>
+                 <div class="jg-tip-container">
+                     {{{product.warranty}}}
+                 </div>
+             </div>
+         </div>
+        {{/if}}
         <section class="productView-description">
                 <article class=""{{#if schema}} itemprop="description"{{/if}}>
         {{#if theme_settings.show_product_details_tabs}}

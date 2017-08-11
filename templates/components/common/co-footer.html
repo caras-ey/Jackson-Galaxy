@@ -5,60 +5,8 @@
     </div>
 </div>
 {{/if}}
-<footer class="footer" role="contentinfo">
+<footer class="footer co-footer" role="contentinfo">
 <div class="wrapper">
-    {{#if settings.show_newsletter_box}}
-        <div class="newsletter-container" data-section-type="newsletterSubscription">
-
-            {{> components/common/subscription-form}}
-        </div>
-    {{/if}}
-    <div class="footer-social">
-        <h5>Stay Up To Date</h5>
-        <ul>
-            <li><a href=""><i class="ion-social-facebook"></i></a></li>
-            <li><a href=""><i class="ion-social-youtube"></i></a></li>
-            <li><a href=""><i class="ion-social-instagram-outline"></i></a></li>
-            <li><a href=""><i class="ion-social-pinterest-outline"></i></a></li>
-            <li><a href=""><i class="ion-social-twitter"></i></a></li>
-
-        </ul>
-    </div>
-    <div class="footer-columns">
-        <div class="footer-links">
-            <div class="footer-link-col">
-                <h5>My Account</h5>
-                <ul>
-                    <li><a href="">Order Status</a></li>
-                    <li><a href="">Wishlist</a></li>
-                    <li><a href="">Sign In</a></li>
-                    <li><a href="">Create an Account</a></li>
-                </ul>
-            </div>
-            <div class="footer-link-col">
-                <h5>Help Desk</h5>
-                <ul>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Gift Certificates</a></li>
-                </ul>
-            </div>
-            <div class="footer-link-col">
-                <h5>Legal</h5>
-                <ul>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms &amp; Conditions</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-info">
-        <a href=""><img src="{{cdn 'assets/img/ey-images/jg-foundation-logo.png'}}" alt="Jackson Galaxy Foundation"></a>
-        <p>Learn how you can help for all animals at risk and the caring people who work hard every day to save them.</p>
-        <a href="" class="link">Learn More</a>
-            
-        </div>
-    </div>
     <div class="copyright">
                 {{#if theme_settings.geotrust_ssl_common_name}}
             <div class="footer-geotrust-ssl-seal">
@@ -70,11 +18,15 @@
                 <p class="powered-by">Powered by <a href="https://www.bigcommerce.com/" rel="nofollow">BigCommerce</a></p>
             </div>
         {{/if}}
+        <div class="footer-badges">
+            <img src="{{cdn 'assets/img/ey-images/ey-credit-cards.png'}}" alt="We Accept VISA, Mastercard, American Express, PayPal, Discover">
+        </div>
         {{#if theme_settings.show_copyright_footer}}
             <div class="footer-copyright">
                 <p class="powered-by">Copyright &copy; {{moment format="YYYY"}} Little Big Cat, Inc. All Rights Reserved. Site Design by <a href="http://www.eystudios.com">EYStudios.</a><!--{{settings.store_name}}--> </p>
             </div>
         {{/if}}
+        
     </div>
 </div>
     <div class="container">

@@ -1,0 +1,22 @@
+<div class="product-info-toggle container">
+	<section class="toggle productDescription" {{#if schema}} itemprop="description"{{/if}} data-product-description>
+	<h4 class="productView-title toggle-title">
+	<a href="#productDescription-content" class="toggleLink is-open" data-collapsible>
+	{{lang 'products.description'}}
+		<span class="toggleLink-text toggleLink-text--on ion-android-remove">
+	
+		</span>
+		<span class="toggleLink-text toggleLink-text--off ion-android-add">
+			
+		</span>
+	</a>
+	</h4>
+	<div class="toggle-content is-open" id="productDescription-content">
+		{{{product.description}}}
+	</div>
+</section>
+
+{{#if product.videos.list.length}}
+	{{> components/products/videos product.videos}}
+{{/if}}
+</div>

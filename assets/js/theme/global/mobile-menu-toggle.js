@@ -98,6 +98,8 @@ export class MobileMenuToggle {
         this.$scrollView.scrollTop(0);
 
         this.resetSubMenus();
+
+        alert("hi");
     }
 
     hide() {
@@ -119,7 +121,6 @@ export class MobileMenuToggle {
     // Private
     onToggleClick(event) {
         event.preventDefault();
-
         this.toggle();
     }
 

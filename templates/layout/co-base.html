@@ -10,7 +10,11 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> 
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         {{{stylesheet '/assets/css/theme.css'}}}
+        
+        <!--{{{stylesheet '/assets/scss/ey-styles.scss'}}}-->
         {{{stylesheet '/assets/css/ey-styles.css'}}}
+
+
         {{ getFontsCollection }}
         <script src="{{cdn 'assets/modernizr-custom.js'}}"></script>
 
@@ -23,7 +27,7 @@
         {{inject 'urls' urls}}
         {{{snippet 'htmlhead'}}}
     </head>
-    <body>
+    <body class="co-body">
         {{{snippet 'header'}}}
         <div class="icons-svg-sprite">{{> components/common/icons/icon-defs }}</div>
 
@@ -31,16 +35,17 @@
             {{> components/common/cookie}}
         {{/if}}
 
-        {{> components/common/header }}
+        {{> components/common/co-header }}
         {{> components/common/body }}
-        {{> components/common/footer }}
+        {{> components/common/co-footer }}
 
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
         <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
 
+
         <script>
             // Exported in app.js
-            window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+            window.stencilBootstrap("{{template}}", {{jsContext}}).load();
         </script>
 
         {{{footer.scripts}}}

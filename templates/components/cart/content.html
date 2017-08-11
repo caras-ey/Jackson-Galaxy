@@ -96,7 +96,7 @@
                         {{# if can_modify}}
                             <button class="button button--icon" data-cart-update data-cart-itemid="{{id}}" data-action="dec">
                                 <span class="is-srOnly">{{lang 'products.quantity_decrease'}}</span>
-                                <i class="icon" aria-hidden="true"><svg><use xlink:href="#icon-keyboard-arrow-down" /></svg></i>
+                                <i class="ion-ios-minus-empty" aria-hidden="true"><!--<svg><use xlink:href="#icon-keyboard-arrow-down" /></svg>--></i>
                             </button>
                         {{/if}}
                         <input class="form-input form-input--incrementTotal"
@@ -114,7 +114,7 @@
                         {{# if can_modify}}
                             <button class="button button--icon" data-cart-update data-cart-itemid="{{id}}" data-action="inc">
                                 <span class="is-srOnly">{{lang 'products.quantity_increase'}}</span>
-                                <i class="icon" aria-hidden="true"><svg><use xlink:href="#icon-keyboard-arrow-up" /></svg></i>
+                                <i class="ion-ios-plus-empty" aria-hidden="true"><!--<svg><use xlink:href="#icon-keyboard-arrow-up" /></svg>--></i>
                             </button>
                         {{/if}}
                     </div>

@@ -5,13 +5,29 @@
     </div>
 </div>
 {{/if}}
+<div class="sitewide-banner">   
+    <div class="wrapper">
+    <strong>SUMMER SALE - SALE 10%</strong> on ALL Catification products through 7/30! Use code <strong>MOJO10</strong>
+    </div>
+</div>
 <header class="header" role="banner">
+<div class="wrapper">
+    
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
     </a>
+    <div class="header-icons">
     {{> components/common/navigation}}
+        <div class="header-cart">
+        <a href="{{urls.cart}}"><i class="ion-ios-cart"></i> <span>({{cart.quantity}})</span></a>
+    </div>
+    <div class="header-search-toggle">
+        <i class="ion-android-search"></i>
+        <i class="icon ion-android-close"></i>
+    </div>
+</div>
 
-    {{#if page_type '===' 'default'}}
+    {{#if template '===' 'pages/home'}}
         <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
             {{> components/common/store-logo}}
         </h1>
@@ -20,9 +36,17 @@
             {{> components/common/store-logo}}
         </div>
     {{/if}}
+
+    <div class="header-search">
+        <div class="dropdown--quickSearch" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+        {{> components/common/quick-search}}
+    </div>
+    </div>
+    <div class="clear"></div>
     {{{region name="header_bottom"}}}
+</div>
     <div class="navPages-container" id="menu" data-menu>
-        {{> components/common/navigation-menu}}
+    {{> components/common/navigation-menu-custom}}
     </div>
 
 </header>

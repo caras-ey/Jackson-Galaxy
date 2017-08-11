@@ -17,31 +17,55 @@ category:
 {{#partial "page"}}
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-{{#if category.image}}
+
+<div class="page">
+<div class="wrapper">
+    {{#if category.image}}
     <img src="{{getImage category.image 'zoom_size'}}">
 {{/if}}
-<h1 class="page-heading">{{category.name}}</h1>
-{{{category.description}}}
+<div class="section-title-area">
+    <h1 class="page-heading">{{category.name}}</h1>
+<div class="section-description">
+    {{{category.description}}}
+</div>
+</div>
 {{{snippet 'categories'}}}
-<div class="page">
-    {{#or category.subcategories category.faceted_search_enabled}}
+
+
+    <div class="mobile-refine-toggle">
+        <a href="#facetedSearch-navList" role="button" class="facetedSearch-toggle toggleLink" data-collapsible>
+        <span class="facetedSearch-toggle-text">
+            {{#if facets.length '>' 2}}
+                {{lang 'search.faceted.browse-by'}} {{ join (pluck facets 'title') ', ' limit=2 }} &amp; {{ toLowerCase (lang 'search.faceted.more') }}
+            {{/if}}
+
+            {{#if facets.length '<=' 2}}
+                {{lang 'search.faceted.browse-by'}} {{ join (pluck facets 'title') ', ' lastSeparator=' & ' }}
+            {{/if}}
+        </span>
+
+        <span class="facetedSearch-toggler">
+            Refine By
+        </span>
+    </a>
+    </div>
+    <div class="mobile-sort">
+        {{> components/products/filter sort=pagination.category.sort}}
+    </div>
+    {{#or category.subcategories category.faceted_search_enabled category.shop_by_price}}
         <aside class="page-sidebar" id="faceted-search-container">
             {{> components/category/sidebar}}
         </aside>
-    {{else}}
-        {{#if theme_settings.shop_by_price_visible}}
-            <aside class="page-sidebar" id="faceted-search-container">
-                {{> components/category/sidebar}}
-            </aside>
-        {{/if}}
     {{/or}}
     <main class="page-content" id="product-listing-container">
+
         {{#if category.products}}
             {{> components/category/product-listing}}
         {{else}}
             <p>{{lang 'categories.no_products'}}</p>
         {{/if}}
     </main>
+</div>
 </div>
 
 {{/partial}}

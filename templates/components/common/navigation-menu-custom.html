@@ -1,0 +1,141 @@
+<nav class="navPages">
+    <div class="navPage-heading">
+    <div class="back navPages-back">
+        BACK
+    </div>
+        <div class="close navPages-close" data-mobile-menu-toggle-close="menu">
+            <i class="icon ion-android-close"></i>
+        </div>
+    </div>
+    <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
+        <li class="navPages-item">
+            <a href="/health-behavior-aids/" class="navPages-action has-subMenu" data-collapsible="navPages-1" aria-controls="navPages-1" aria-expanded="false">Health &amp; Behavior Aids <i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i></a>
+            <div class="navPage-subMenu" id="navPages-1" aria-hidden="true" tabindex="-1">
+                <ul class="navPage-subMenu-list">
+                    <li><a href="">Test</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="navPages-item">
+            <a href="/toys/" class="navPages-action">Toys</a>
+        </li>
+        <li class="navPages-item">
+            <a href="/supplies/" class="navPages-action">Supplies</a>
+        </li>
+        <li class="navPages-item">
+            <a href="/for-humans/" class="navPages-action">For Humans</a>
+        </li>
+        <li class="navPages-item">
+            <a href="" class="navPages-action">Kitty Hub</a>
+        </li>
+        <li class="navPages-item">
+            <a href="" class="navPages-action">JG Foundation</a>
+        </li>
+        <!--
+        {{#each categories}}
+        <li class="navPages-item">
+            {{#if ../theme_settings.navigation_design '===' 'simple'}}
+            {{> components/common/navigation-list}}
+            {{/if}}
+            {{#if ../theme_settings.navigation_design '===' 'alternate'}}
+            {{> components/common/navigation-list-alternate}}
+            {{/if}}
+        </li>
+        {{/each}}
+        -->
+        
+    </ul>
+    <ul class="navPages-list navPages-list--user">
+        {{#if currency_selector.currencies.length '>' 1}}
+        <li class="navPages-item">
+            <a class="navPages-action has-subMenu" href="#" data-collapsible="navPages-currency" aria-controls="navPages-currency" aria-expanded="false">
+            {{lang 'common.currency' code=currency_selector.active_currency_code}} <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-down"></use></svg></i>
+        </a>
+        <div class="navPage-subMenu" id="navPages-currency" aria-hidden="true" tabindex="-1">
+            <ul class="navPage-subMenu-list">
+                {{#each currency_selector.currencies}}
+                <li class="navPage-subMenu-item">
+                    <a class="navPage-subMenu-action navPages-action" href="{{{switch_url}}}">
+                        {{#if is_active}}
+                        <strong>{{name}}</strong>
+                        {{else}}
+                        {{name}}
+                        {{/if}}
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </li>
+    {{/if}}
+    <!--
+    {{#if settings.gift_certificates_enabled}}
+    <li class="navPages-item">
+        <a class="navPages-action" href="{{urls.gift_certificate.purchase}}">{{lang 'common.gift_cert'}}</a>
+    </li>
+    {{/if}}-->
+    <!--
+    {{#if customer.store_credit.value '>' 0}}
+    <li class="navPages-item">
+        <a class="navPages-action navPages-action--storeCredit">
+            {{lang 'common.store_credit_overview' credit=customer.store_credit.formatted}}
+        </a>
+    </li>
+    {{/if}}-->
+    <!--
+    {{#if theme_settings.product_list_display_mode '==' 'list'}}
+    <li class="navPages-item">
+        <a class="navPages-action navPages-action--compare" href="{{urls.compare}}" data-compare-nav>{{lang 'common.compare'}} <span class="countPill countPill--positive countPill--alt"></span></a>
+    </li>
+    {{/if}}-->
+    {{#if customer}}
+    <li class="navPages-item">
+        <a class="navPages-action has-subMenu" href="{{urls.account.index}}" data-collapsible="navPages-account">
+        {{lang 'common.account'}} <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+    </a>
+    <div class="navPage-subMenu" id="navPages-account" aria-hidden="true" tabindex="-1">
+        <ul class="navPage-subMenu-list">
+            <li class="navPage-subMenu-item">
+                <a class="navPage-subMenu-action navPages-action" href="{{urls.account.orders.all}}">{{lang 'account.nav.orders'}}</a>
+            </li>
+            {{#if settings.returns_enabled}}
+            <li class="navPage-subMenu-item">
+                <a class="navPage-subMenu-action navPages-action" href="{{urls.account.returns}}">{{lang 'account.nav.returns'}}</a>
+            </li>
+            {{/if}}
+            <li class="navPage-subMenu-item">
+                <a class="navPage-subMenu-action navPages-action" href="{{urls.account.inbox}}">{{lang 'account.mobile_nav.messages'}}</a>
+            </li>
+            <li class="navPage-subMenu-item">
+                <a class="navPage-subMenu-action navPages-action" href="{{urls.account.addresses}}">{{lang 'account.nav.addresses'}}</span></a>
+            </li>
+            <li class="navPage-subMenu-item">
+                <a class="navPage-subMenu-action navPages-action" href="{{urls.account.wishlists.all}}">{{lang 'account.mobile_nav.wishlists'}}</a>
+            </li>
+            <li class="navPage-subMenu-item">
+                <a class="navPage-subMenu-action navPages-action" href="{{urls.account.recent_items}}">{{lang 'account.nav.recently_viewed'}}</a>
+            </li>
+            <li class="navPage-subMenu-item">
+                <a class="navPage-subMenu-action navPages-action" href="{{urls.account.details}}">{{lang 'account.nav.settings'}}</a>
+            </li>
+        </ul>
+    </div>
+</li>
+<li class="navPages-item">
+    <a class="navPages-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+</li>
+{{else}}
+<li class="navPages-item">
+    <a class="navPages-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
+    {{#if settings.account_creation_enabled}}
+    {{lang 'common.or'}} <a class="navPages-action" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
+    {{/if}}
+</li>
+{{/if}}
+<!--{{#if theme_settings.social_icon_placement_top}}
+<li class="navPages-item">
+    {{> components/common/social-links}}
+</li>
+{{/if}}-->
+</ul>
+</nav>

@@ -1,12 +1,14 @@
 {{#partial "page"}}
-<div class="page">
+<div class="container">
+    <div class="page">
 
-    <main class="page-content" data-cart>
-        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <main class="" data-cart>
+       <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 
         {{> components/cart/page-title}}
 
-        <div data-cart-status>
+        <div class="cart-content">
+            <div data-cart-status>
             {{> components/cart/status-messages}}
         </div>
 
@@ -23,7 +25,8 @@
 
             {{#if cart.show_primary_checkout_button}}
                 <div class="cart-actions">
-                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}">{{lang 'cart.checkout.button'}}</a>
+                <a class="button keep-shopping" href="{{urls.home}}" title="{{lang 'cart.continue_shopping'}}"><i class="icon ion-ios-arrow-left"></i>{{lang 'cart.continue_shopping'}}</a>
+                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}"><i class="ion-ios-cart"></i>{{lang 'cart.checkout.button'}}</a>
                     {{#if cart.show_multiple_address_shipping}}
                         <a class="checkoutMultiple" href="{{urls.checkout.multiple_address}}">
                             {{lang 'cart.preview.checkout_multiple'}}
@@ -46,9 +49,14 @@
         {{else}}
             <h3>{{lang 'cart.checkout.empty_cart'}}</h3>
         {{/if}}
+        </div>
+
+        {{> components/cart/trust-column}}
+        <div class="clear"></div>
 
         {{{snippet 'cart'}}}
     </main>
 </div>
+</div>
 {{/partial}}
-{{> layout/base}}
+{{> layout/co-base}}

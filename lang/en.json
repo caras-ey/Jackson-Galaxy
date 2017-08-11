@@ -146,7 +146,7 @@
         "close": "Close",
         "or": "or",
         "compare": "Compare",
-        "sign_up": "Register",
+        "sign_up": "Create An Account",
         "login": "Sign in",
         "logout": "Sign out",
         "account": "Account",
@@ -712,9 +712,9 @@
         "comments": "Comments"
     },
     "newsletter": {
-        "subscribe": "Subscribe to our newsletter",
-        "subscribe_intro": "Get the latest updates on new products and upcoming sales",
-        "subscribe_submit": "Subscribe",
+        "subscribe": "Here's a Treat for You",
+        "subscribe_intro": "Join our newsletter today to <strong class=\"test\">GET 10% OFF<\/strong> your first order.",
+        "subscribe_submit": "Join",
         "email_placeholder": "Your email address",
         "subscribed_heading": "Thanks for Subscribing!",
         "subscribed_heading_error": "Oops...",
@@ -732,7 +732,7 @@
     "search": {
         "quick_search": {
             "input_label": "Search",
-            "input_placeholder": "Search the store"
+            "input_placeholder": "Search"
         },
         "results": {
             "form_label": "Search Keyword:",
