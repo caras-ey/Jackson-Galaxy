@@ -12,6 +12,18 @@ $(document).ready(() => {
         $(event.currentTarget).toggleClass('active');
         $(event.currentTarget).parent().find('ul').slideToggle();
     });
+    $('.mmLinks h4').click((event) => {
+        $(event.currentTarget).parent().toggleClass('open');
+        $(event.currentTarget).next().slideToggle();
+    });
+
+    $('.navPages-item:nth-child(1)').mouseenter(() => {
+        $('#ey-overlay').show();
+    });
+
+    $('.navPages-item').mouseleave(() => {
+        $('#ey-overlay').hide();
+    });
 
     $('.productView-thumbnails').slick({
         dots: false,
@@ -30,6 +42,23 @@ $(document).ready(() => {
             {
                 breakpoint: 768,
                 settings: 'unslick',
+            },
+        ],
+    });
+    $('.solution-kickers .solution-container').slick({
+        dots: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToSroll: 3,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                },
             },
         ],
     });

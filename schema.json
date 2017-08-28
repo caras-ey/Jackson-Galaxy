@@ -968,6 +968,256 @@
     ]
   },
   {
+    "name" : "Homepage",
+    "settings": [
+      {
+        "type" : "heading",
+        "content" : "General"
+      },
+      {
+        "type": "heading",
+        "content": "Homepage Solutions"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Link 1",
+        "id" : "hp_solution_link_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution 1",
+        "id" : "hp_solution_title_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Issue 1",
+        "id" : "hp_solution_issue_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Customer 1",
+        "id" : "hp_solution_customer_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Graphic 1",
+        "id" : "hp_solution_graphic_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Product Image 2",
+        "id" : "hp_solution_prod_image_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Link 2",
+        "id" : "hp_solution_link_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution 2",
+        "id" : "hp_solution_title_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Issue 2",
+        "id" : "hp_solution_issue_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Customer 2",
+        "id" : "hp_solution_customer_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Graphic 2",
+        "id" : "hp_solution_graphic_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Product Image 2",
+        "id" : "hp_solution_prod_image_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Link 3",
+        "id" : "hp_solution_link_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution 3",
+        "id" : "hp_solution_title_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Issue 3",
+        "id" : "hp_solution_issue_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Customer 3",
+        "id" : "hp_solution_customer_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Graphic 3",
+        "id" : "hp_solution_graphic_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Solution Product Image 3",
+        "id" : "hp_solution_prod_image_3"
+      },
+      {
+        "type": "heading",
+        "content": "Homepage Promo"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Promo",
+        "id"  : "hp_promo"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Promo Item",
+        "id"  : "hp_promo_item"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Promo Code",
+        "id" : "hp_promo_code"
+      },
+      {
+        "type": "heading",
+        "content": "Homepage Featured Categories"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category 1",
+        "id" : "hp_featured_category_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Link 1",
+        "id" : "hp_featured_category_link_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Image 1",
+        "id" : "hp_featured_category_image_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Support Text 1",
+        "id" : "hp_featured_category_support_text_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category 2",
+        "id" : "hp_featured_category_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Link 2",
+        "id" : "hp_featured_category_link_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Image 2",
+        "id" : "hp_featured_category_image_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Support Text 2",
+        "id" : "hp_featured_category_support_text_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category 3",
+        "id" : "hp_featured_category_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Link 3",
+        "id" : "hp_featured_category_link_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Image 3",
+        "id" : "hp_featured_category_image_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Featured Category Support Text 3",
+        "id" : "hp_featured_category_support_text_3"
+      },
+      {
+        "type": "heading",
+        "content": "Homepage Resources"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Link 1",
+        "id" : "hp_resource_link_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Title 1",
+        "id" : "hp_resource_title_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Text 1",
+        "id" : "hp_resource_text_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Image 1",
+        "id" : "hp_resource_image_1"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Link 2",
+        "id" : "hp_resource_link_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Title 2",
+        "id" : "hp_resource_title_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Text 2",
+        "id" : "hp_resource_text_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Image 2",
+        "id" : "hp_resource_image_2"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Link 3",
+        "id" : "hp_resource_link_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Title 3",
+        "id" : "hp_resource_title_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Text 3",
+        "id" : "hp_resource_text_3"
+      },
+      {
+        "type" : "text",
+        "label" : "HP Resource Image 3",
+        "id" : "hp_resource_image_3"
+      }
+    ]
+  },
+  {
     "name": "Payment Icons",
     "settings": [
       {

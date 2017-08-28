@@ -1,19 +1,60 @@
 <nav class="navPages">
     <div class="navPage-heading">
-    <div class="back navPages-back">
-        BACK
-    </div>
+        <div class="back navPages-back">
+            BACK
+        </div>
         <div class="close navPages-close" data-mobile-menu-toggle-close="menu">
             <i class="icon ion-android-close"></i>
         </div>
     </div>
     <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
         <li class="navPages-item">
-            <a href="/health-behavior-aids/" class="navPages-action has-subMenu" data-collapsible="navPages-1" aria-controls="navPages-1" aria-expanded="false">Health &amp; Behavior Aids <i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i></a>
+            <a href="/health-behavior-aids/" class="navPages-action has-subMenu mob" data-collapsible="navPages-1" aria-controls="navPages-1" aria-expanded="false">Health &amp; Behavior Aids <i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i></a>
+            <a href="/health-behavior-aids/" class="navPages-action has-subMenu desk" >Health &amp; Behavior Aids <i class="icon navPages-action-moreIcon" aria-hidden="true"><img src="{{cdn 'assets/img/ey-images/menu-arrow-right.png'}}" alt="Right Arrow"></i></a>
             <div class="navPage-subMenu" id="navPages-1" aria-hidden="true" tabindex="-1">
-                <ul class="navPage-subMenu-list">
-                    <li><a href="">Test</a></li>
-                </ul>
+                <div class="mmLinks">
+                    <div class="mmLinkCol">
+                    <h4>Shop By Issue</h4>
+                        <ul class="navPage-subMenu-list">
+                            <li><a href="/health-behavior-aids/solutions/by-issue/behavior/">Behavior</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-issue/environment-territory/">Environment &amp; Territory</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-issue/health-wellness/">Health &amp; Wellness</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-issue/inter-animal-social/">Inter-Animal &amp; Social</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-issue/shelter-rescue-foster-solutions/">Shelter, Rescue &amp; Foster Solutions</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-issue/special-needs-situations/">Special Needs &amp; Situations </a></li>
+                        </ul>
+                    </div>
+                    <div class="mmLinkCol">
+                    <h4>Shop By Personality</h4>
+                        <ul class="navPage-subMenu-list">
+                            <li><a href="/health-behavior-aids/solutions/by-personality/dominant/">Dominant</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-personality/grouchy/">Grouchy</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-personality/hyper/">Hyper</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-personality/nervous/">Nervous</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-personality/obsessive/">Obsessive</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-personality/scattered/">Scattered</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-personality/senior/">Senior</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-personality/shy/">Shy</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-personality/territorial/">Territorial</a></li>
+                        </ul>
+                    </div>
+                    <div class="mmLinkCol">
+                    <h4>Shop By Species</h4>
+                        <ul class="navPage-subMenu-list">
+                            <li><a href="/health-behavior-aids/solutions/by-species/for-birds/">For Birds</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-species/for-cats/">For Cats</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-species/for-dogs/">For Dogs</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-species/for-horses/">For Horses</a></li>
+                            <li><a href="/health-behavior-aids/solutions/by-species/not-species-specific-for-all-animals/">Not Species-Specific(for all animals)</a></li>
+                            <li class="shop-all"><a href="/health-behavior-aids/solutions/">View All Solutions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mmAd">
+                    <a href="">
+                        <img src="{{cdn '/assets/img/ey-images/mmad1.jpg'}}" alt="">
+                    </a>
+                </div>
             </div>
         </li>
         <li class="navPages-item">

@@ -7,6 +7,15 @@
 
 <script type="text/javascript">
     window.language = {{{langJson 'optimized_checkout'}}};
+
+    function continueClick(){
+        document.getElementById("#checkout-customer-continue").addEventListener("click", function(){
+            alert("HI");
+        });
+    }
+
+    setTimeout(function(){continueClick();}, 5000);
+    
 </script>
 
 {{/partial}}

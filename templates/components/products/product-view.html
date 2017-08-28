@@ -219,6 +219,8 @@
                 </div>
                 {{#if product.can_purchase}}
                     {{> components/products/add-to-cart}}
+                {{else}}
+                This product is not available for purchase.
                 {{/if}}
                 {{#if product.out_of_stock}}
                     {{#if product.out_of_stock_message}}
