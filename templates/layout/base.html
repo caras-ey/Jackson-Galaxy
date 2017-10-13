@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600,700" rel="stylesheet"> 
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         {{{stylesheet '/assets/css/theme.css'}}}
-        {{{stylesheet '/assets/css/ey-styles.css'}}}
+        <!--{{{stylesheet '/assets/css/ey-styles.css'}}}-->
         {{ getFontsCollection }}
         <script src="{{cdn 'assets/modernizr-custom.js'}}"></script>
 
@@ -43,7 +43,7 @@
             // Exported in app.js
             window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
         </script>
-
+        <div id="ey-overlay2"></div>
         {{{footer.scripts}}}
         {{{snippet 'footer'}}}
     </body>

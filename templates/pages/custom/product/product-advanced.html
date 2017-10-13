@@ -23,14 +23,14 @@ product:
         {{#if product.warranty}}
          <div class="jg-tip">
              <div class="container">
-             <h3><img src="{{cdn 'assets/img/ey-images/jg-footer-logo.png'}}" alt="" width="145">Jackson Galaxy Tip</h3>
+             <h3><img src="{{cdn 'assets/img/ey-images/jg-tip-title.png'}}" alt=""></h3>
                  <div class="jg-tip-container">
                      {{{product.warranty}}}
                  </div>
              </div>
          </div>
         {{/if}}
-        <section class="productView-description">
+        <section class="productView-description wrapper">
                 <article class=""{{#if schema}} itemprop="description"{{/if}}>
         {{#if theme_settings.show_product_details_tabs}}
             {{> components/products/description-tabs}}
@@ -57,9 +57,7 @@ product:
     </div>
 </div>
 
-        {{#if product.videos.list.length}}
-            {{> components/products/videos product.videos}}
-        {{/if}}
+    
 
         
 

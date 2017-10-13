@@ -1,11 +1,14 @@
 {{#partial "page"}}
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-<h1 class="page-heading">{{lang 'gift_certificate.heading' }}</h1>
+<div class="container">
+    <h1 class="page-heading">{{lang 'gift_certificate.heading' }}</h1>
 {{> components/gift-certificate/navigation gift_page='purchase'}}
+</div>
 
-<main class="account account--fixed">
-
+<main class="container">
+    <div class="account account--fixed">
+        
     {{#each forms.gift_certificate.errors}}
         {{> components/common/alert-error this}}
     {{/each}}
@@ -120,6 +123,7 @@
                 value="{{lang 'forms.gift_certificate.purchase.submit_value' }}">
         </div>
     </form>
+    </div>
 </main>
 {{/partial}}
 {{> layout/base}}

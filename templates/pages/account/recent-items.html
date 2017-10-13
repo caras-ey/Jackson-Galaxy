@@ -1,8 +1,10 @@
 {{#partial "page"}}
 <div class="account">
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <div class="container"> 
     <h2 class="page-heading">{{lang 'account.recent_items.heading' }}</h2>
-    {{> components/account/navigation account_page='recent_items'}}
+    {{> components/account/navigation account_page='recent_items'}}</div>
+<div class="container"> 
 
     {{#unless customer.recently_viewed_products.items}}
         {{> components/common/alert-info (lang 'account.recent_items.no_items')}}
@@ -11,6 +13,7 @@
     <form action="{{urls.compare}}" method="post">
         {{> components/products/grid products=customer.recently_viewed_products.items show_compare=customer.recently_viewed_products.show_compare}}
     </form>
+    </div>
 </div>
 {{/partial}}
 {{> layout/base}}

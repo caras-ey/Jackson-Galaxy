@@ -38,7 +38,7 @@ category:
 {{{snippet 'categories'}}}
 
     <div class="mobile-refine-toggle">
-        <a href="#facetedSearch-navList" role="button" class="facetedSearch-toggle toggleLink" data-collapsible>
+        <a href="#faceted-search-container" role="button" class="facetedSearch-toggle toggleLink" data-collapsible>
         <span class="facetedSearch-toggle-text">
             {{#if facets.length '>' 2}}
                 {{lang 'search.faceted.browse-by'}} {{ join (pluck facets 'title') ', ' limit=2 }} &amp; {{ toLowerCase (lang 'search.faceted.more') }}
@@ -58,7 +58,7 @@ category:
         {{> components/products/filter sort=pagination.category.sort}}
     </div>
     {{#or category.subcategories category.faceted_search_enabled category.shop_by_price}}
-        <aside class="page-sidebar" id="faceted-search-container">
+        <aside class="page-sidebar faceted-search-container" id="faceted-search-container">
             {{> components/category/sidebar}}
         </aside>
     {{/or}}
@@ -72,6 +72,12 @@ category:
     </main>
 </div>
 </div>
-
+<script type="text/javascript">
+var google_tag_params = {
+ecomm_prodid: [{{#forEach category.products}}'{{sku}}'{{#unless isLast}},{{/unless}}{{/forEach}}],
+ecomm_pagetype: 'category',
+ecomm_totalvalue: 0
+};
+</script>
 {{/partial}}
 {{> layout/base}}

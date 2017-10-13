@@ -62,4 +62,21 @@ $(document).ready(() => {
             },
         ],
     });
+    $('.kitty-hub-subjects .subject-container').slick({
+        dots: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToSroll: 3,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                },
+            },
+        ],
+    });
 });

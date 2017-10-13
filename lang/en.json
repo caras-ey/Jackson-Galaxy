@@ -33,14 +33,14 @@
         "title": "Checkout"
     },
     "cart": {
-        "continue_shopping": "Click here to continue shopping",
+        "continue_shopping": "Keep Shopping",
         "items": "{NUM, plural, =0{(0 items)} one {(# item)} other {(# items)}}",
         "checkout": {
             "address": {
                 "multiple": "check out with multiple addresses",
                 "or": "or"
             },
-            "button": "Check out",
+            "button": "Proceed to Checkout",
             "empty_cart": "Your cart is empty",
             "title": "Click here to proceed to checkout",
             "item": "Item",

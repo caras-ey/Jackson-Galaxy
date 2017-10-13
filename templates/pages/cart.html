@@ -35,7 +35,7 @@
                 </div>
             {{else}}
                 <div class="cart-actions">
-                    <a class="button" href="{{urls.home}}" title="{{lang 'cart.continue_shopping'}}">{{lang 'cart.continue_shopping'}}</a>
+                    <a class="button button" href="{{urls.home}}" title="{{lang 'cart.continue_shopping'}}">{{lang 'cart.continue_shopping'}}</a>
                 </div>
             {{/if}}
 
@@ -58,5 +58,12 @@
     </main>
 </div>
 </div>
+<script type="text/javascript">
+var google_tag_params = {
+ecomm_prodid: [{{#forEach cart.items}}'{{sku}}'{{#unless isLast}},{{/unless}}{{/forEach}}],
+ecomm_pagetype: 'cart',
+ecomm_totalvalue: {{cart.grand_total.value}}
+};
+</script>
 {{/partial}}
 {{> layout/co-base}}

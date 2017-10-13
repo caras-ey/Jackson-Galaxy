@@ -1,11 +1,14 @@
 {{#partial "page"}}
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-<h1 class="page-heading">{{lang 'account.messages.heading' }}</h1>
+<div class="container">
+    <h1 class="page-heading">{{lang 'account.messages.heading' }}</h1>
 {{> components/account/navigation account_page='messages'}}
+</div>
 
 <main class="account account--fixed">
-    <div class="account-body">
+<div class="container">
+        <div class="account-body">
         <section class="account-content">
             {{#if forms.inbox.error}}
                 {{> components/common/alert-error forms.inbox.error}}
@@ -17,6 +20,7 @@
             {{> components/account/messages-form}}
         </section>
     </div>
+</div>
 </main>
 
 {{/partial}}

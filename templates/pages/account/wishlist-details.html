@@ -4,11 +4,13 @@
     {{#if wishlist.is_editable}}
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
     {{/if}}
+<div class="container"> 
     <h2 class="page-heading">{{lang 'account.wishlists.view_heading' name=wishlist.name}}</h2>
     {{#if wishlist.is_editable}}
         {{> components/account/navigation account_page='wishlists'}}
-    {{/if}}
+    {{/if}}</div>
 
+<div class="container"> 
     {{#if wishlist.is_editable}}
         {{#if wishlist.is_public '>' 0}}
             <div class="panel share-wishlist">
@@ -25,6 +27,7 @@
     {{else}}
         {{> components/common/alert-info (lang 'account.wishlists.empty_wishlist')}}
     {{/if}}
+    </div>
 
 </div>
 {{/partial}}

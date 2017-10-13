@@ -1,0 +1,105 @@
+{{#partial "page"}}
+
+<main class="page about-page">
+    <div class="about-banner">
+        <div class="container">
+            <div class="text">
+                <h1 class="page-heading">{{ page.title }}</h1>
+                <h2 class="page-heading">Who We Are</h2>
+                <p>We're dedicated to making sure your life with a pet is the best it can be. Find great products, get expert advice, and connect with others who love cats as much as you do.</p>         
+            </div>
+        </div>
+    </div>
+    <div class="jg-about-promise">
+        <div class="container">
+            <h3>Our Promise to Our Customers</h3>
+            <ul>
+                <li>
+                    <img src="{{cdn '/assets/img/ey-images/pet-icon.png'}}" alt="Pet icon">
+                    <h4>We Know Pets</h4>
+                    <p>Jackson Galaxy has decades of experience with improving the lives of cats and guardians. </p>
+                </li>
+                <li>
+                    <img src="{{cdn '/assets/img/ey-images/cup-icon.png'}}" alt="Award icon">
+                    <h4>Only the Best Products</h4>
+                    <p>All of our products are Jackson tested and approved, so you don't have spend hours scouring the web!</p>
+                </li>
+                <li>
+                    <img src="{{cdn '/assets/img/ey-images/help-icon.png'}}" alt="Helping hand icon">
+                    <h4>We're Here to Help</h4>
+                    <p>Check out Cat Daddy Tips for resources, advice, and more. Our team of customer service experts will help with any product question you have.</p>
+                </li>
+                <li>
+                    <img src="{{cdn '/assets/img/ey-images/guarantee-icon.png'}}" alt="Satisfaction icon">
+                    <h4>100% Satisfaction Guaranteed</h4>
+                    <p>Don't like it? Return in 30 days or less for a full refund.</p>
+                </li>
+                <li>
+                    <img src="{{cdn '/assets/img/ey-images/truck-icon.png'}}" alt="Truck icon">
+                    <h4>Free Shipping</h4>
+                    <p>On all qualifying orders of $50 or more within the USA.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="about-info-block">
+        <div class="container">
+            <div class="row row1">
+                <div class="right">
+                    <span class="ribbon">If we can't find a product, we make it</span>
+                    <h3>Holistic Solutions</h3>
+                    <p>If we can't find a product, we make it! Jackson Galaxy began using super-effective Holistic Solutions with his own pets. He later partnered with a vet to expand the line to help with even more health and behavioral issues. And now, 20 years later, you can watch them in action on Animal Planet's My Cat From Hell.  </p>
+                    <a href="/health-behavior-aids/solutions/">Learn more</a>
+                </div>
+                <div class="left">
+                    <img src="{{cdn '/assets/img/ey-images/about-solution-graphic.jpg'}}" alt="">
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="left">
+                    <h3>Jackson Galaxy Foundation</h3>
+                    <p>The Jackson Galaxy Project which works to improve the lives of sheltered animals by transforming the places they live and helping the people who care for them.</p>
+                    <a href="/jg-foundation">Learn More</a>
+                </div>
+                <div class="right">
+                    <img src="{{cdn '/assets/img/ey-images/about-jackson-graphic.jpg'}}" alt="">
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{#if page.sub_pages}}
+    <nav class="navBar navBar--sub">
+        <ul class="navBar-section account-navigation">
+        {{#each page.sub_pages}}
+            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+        {{/each}}
+        </ul>
+    </nav>
+    {{/if}}
+
+    <div class="page-content page-content--centered">
+        {{#replace '%%Syndicate%%' page.content}}
+            {{> components/page/rss_feed}}
+        {{else}}
+            <p>{{{page.content}}}</p>
+        {{/replace}}
+    </div>
+
+    {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+                <li>
+                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                    <p>{{content}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</main>
+
+{{/partial}}
+
+{{> layout/base}}

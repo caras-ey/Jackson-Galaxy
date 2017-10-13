@@ -1,7 +1,8 @@
 {{#partial "page"}}
-<div class="login">
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-    <h1 class="page-heading">{{lang 'login.heading' }}</h1>
+<div class="login">
+   <div class="container">
+        <h1 class="page-heading">{{lang 'login.heading' }}</h1>
     {{#if forms.login.error}}
         {{> components/common/alert-error forms.login.error}}
     {{/if}}
@@ -46,6 +47,7 @@
             </div>
         {{/if}}
     </div>
+   </div>
 </div>
 {{/partial}}
 {{> layout/base}}

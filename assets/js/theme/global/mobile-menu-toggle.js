@@ -91,12 +91,11 @@ export class MobileMenuToggle {
             .attr('aria-expanded', true);
 
         this.$menu
-            .addClass('is-open')
+            .addClass('is-open isopen')
             .attr('aria-hidden', false);
 
         this.$header.addClass('is-open');
         this.$scrollView.scrollTop(0);
-
         this.resetSubMenus();
     }
 
@@ -112,7 +111,6 @@ export class MobileMenuToggle {
             .attr('aria-hidden', true);
 
         this.$header.removeClass('is-open');
-
         this.resetSubMenus();
     }
 
@@ -140,7 +138,6 @@ export class MobileMenuToggle {
         const $closestAction = $(event.target).closest('.navPages-action');
         const $parentSiblings = $closestAction.parent().siblings();
         const $parentAction = $closestAction.closest('.navPage-subMenu-horizontal').siblings('.navPages-action');
-
         if (this.$subMenus.hasClass('is-open')) {
             this.$navList.addClass('subMenu-is-open');
         } else {

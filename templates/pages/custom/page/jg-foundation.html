@@ -1,0 +1,110 @@
+{{#partial "page"}}
+
+<main class="page foundation-page">
+<div class="foundation-banner">
+	<a href="http://www.jacksongalaxyfoundation.org/" target="_blank">
+		<div class="container">
+		<div class="mobile-container">
+			
+		</div>
+	<div class="content">
+		<h1 class="page-heading"><span>Jackson Galaxy</span> Foundation<!--{{ page.title }}--></h1>
+		<div class="text">
+			<h2>Our Mission</h2>
+			<p>To improve the lives of animals at risk by transforming the places they live and helping the people who care for them.</p>
+			<div class="cta"><i class="ion-ios-arrow-forward"></i> Visit the Jackson Galaxy Foundation</div>
+		</div>
+	</div>
+	</div>
+	</a>
+</div>
+<!--<div class="foundation-banner-bar">
+	<div class="container">
+		A portion of proceeds helps animals through the Jackson Galaxy Foundation
+	</div>
+</div>-->
+<div class="foundation-story">
+	<div class="container">
+		<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/N8bOfcDfXcg" frameborder="0" allowfullscreen></iframe></div>
+		<div class="text"><h3>Our Story</h3> <p>Jackson Galaxy found his way into animal welfare the way that most people do: part chance, part fate, part destiny. His journey and experiences from entry-level shelter worker to America’s Cat Daddy sparked him to create the Jackson Galaxy Project.</p></div>
+        <div class="clear"></div>
+	</div>
+</div>
+<div class="foundation-connect">
+	<div class="container">
+		<h2>Get Involved</h2>
+        <a href="{{theme_settings.foundation_kicker_link_1}}" target="_blank">
+            <div class="col3">
+            <div class="image"><img src="https://cdn6.bigcommerce.com/s-rj0z9yqukq/product_images/uploaded_images/{{theme_settings.foundation_kicker_image_1}}" alt="{{theme_settings.foundation_kicker_title_2}}"></div>
+            <div class="text">
+                <div class="title">{{theme_settings.foundation_kicker_title_1}}</div>
+                <div class="subtext">{{theme_settings.foundation_kicker_text_1}}</div>
+                <div class="btn">Register Now</div>
+            </div>
+        </div>
+        </a>
+        <a href="{{theme_settings.foundation_kicker_link_2}}" target="_blank">
+            <div class="col3">
+            <div class="image"><img src="https://cdn6.bigcommerce.com/s-rj0z9yqukq/product_images/uploaded_images/{{theme_settings.foundation_kicker_image_2}}" alt="{{theme_settings.foundation_kicker_title_2}}"></div>
+            <div class="text">
+                <div class="title">{{theme_settings.foundation_kicker_title_2}}</div>
+                <div class="subtext">{{theme_settings.foundation_kicker_text_2}}</div>
+                <div class="btn">Learn More</div>
+            </div>
+        </div>
+        </a>
+        <a href="{{theme_settings.foundation_kicker_link_3}}" target="_blank">
+            <div class="col3">
+            <div class="image"><img src="https://cdn6.bigcommerce.com/s-rj0z9yqukq/product_images/uploaded_images/{{theme_settings.foundation_kicker_image_3}}" alt=""></div>
+            <div class="text">
+                <div class="title">{{theme_settings.foundation_kicker_title_3}}</div>
+                <div class="subtext">{{theme_settings.foundation_kicker_text_3}}</div>
+                <div class="btn">Learn More</div>
+            </div>
+        </div>
+        </a>
+        <div class="clear"></div>
+	</div>
+</div>
+<div class="foundation-message">
+    <div class="container">
+    <div class="text"><div class="quote">I am thrilled to launch the Jackson Galaxy Foundation to improve the lives of sheltered animals and their dedicated advocates. As a long time rescue worker, my heart belongs to the welfare of all animals. I know that knowledge and innovation will save more lives. The pieces are in place, the technology is available, the passion is alive, and the time to act is now.
+    </div> <div class="author">-Jackson Galaxy,</div> <div class="author-desc">founder of The Jackson Galaxy Foundation, animal advocate, 
+and host of Animal Planet’s hit show My Cat From Hell</div></div>
+    <div class="image"><img src="{{cdn '/assets/img/ey-images/foundation-jackson.png'}}" alt=""></div>
+        <div class="clear"></div>
+    </div>
+</div>
+    {{#if page.sub_pages}}
+    <nav class="navBar navBar--sub">
+        <ul class="navBar-section account-navigation">
+        {{#each page.sub_pages}}
+            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+        {{/each}}
+        </ul>
+    </nav>
+    {{/if}}
+
+    <div class="page-content page-content--centered">
+        {{#replace '%%Syndicate%%' page.content}}
+            {{> components/page/rss_feed}}
+        {{else}}
+            <p>{{{page.content}}}</p>
+        {{/replace}}
+    </div>
+
+    {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+                <li>
+                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                    <p>{{content}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</main>
+
+{{/partial}}
+
+{{> layout/base}}

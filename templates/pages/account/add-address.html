@@ -2,15 +2,19 @@
 
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
-    {{#if forms.address.address_id}}
+<div class="container">
+        {{#if forms.address.address_id}}
         <h2 class="page-heading">{{lang 'forms.address.edit.heading'}}</h2>
     {{else}}
         <h2 class="page-heading">{{lang 'forms.address.add.heading'}}</h2>
     {{/if}}
 
     {{> components/account/navigation account_page='addresses'}}
+</div>
+<main>  
+<div class="container"> 
 
-    <div class="account account--fixed">
+    <div class="account">
 
         {{#if forms.address.error}}
             {{> components/common/alert-error forms.address.error}}
@@ -39,6 +43,8 @@
 
         </div>
     </div>
+</div>
+</main>
 
 {{/partial}}
 {{> layout/base}}

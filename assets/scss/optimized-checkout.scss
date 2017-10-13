@@ -14,21 +14,37 @@
 // Header Section
 // Background, Logo Position
 // -----------------------------------------------------------------------------
+.container, .layout {
+    padding: 0 15px;
+    max-width: 1230px;
+}
+
+a.stepHeader {
+    text-decoration: none;
+}
+
+.optimizedCheckout-orderSummary .cart-header {
+    display: table;
+}
 
 .optimizedCheckout-header {
     background-color: stencilColor("optimizedCheckout-header-backgroundColor");
-    // scss-lint:disable StringQuotes
-    background-image: url(stencilImage('optimizedCheckout-backgroundImage', 'optimizedCheckout-backgroundImage-size'));
-    // scss-lint:enable StringQuotes
-    background-size: cover;
+    // scss-lint: disable StringQuotes
+    background-image:url(stencilImage('optimizedCheckout-backgroundImage', 'optimizedCheckout-backgroundImage-size'));
+    // scss-lint: enable StringQuotes
+    background-size:cover;
 
     //
-    // TODO:
-    // Configure media query to be 'desktop' breakpoint size
+    // TODO:// Configure media query to be 'desktop' breakpoint size
     // -----------------------------------------------------------------------------
-    @media (min-width: 801px) {
+    @media (min-width:801px) {
         text-align: stencilString("optimizedCheckout-logo-position");
     }
+
+}
+
+.optimizedCheckout-orderSummary.cart {
+    display: none;
 }
 
 //
@@ -42,7 +58,7 @@
     color: stencilColor("optimizedCheckout-headingPrimary-color");
     font-family: stencilFontFamily("optimizedCheckout-headingPrimary-font"), Arial, Helvetica, sans-serif;
     font-weight: stencilFontWeight("optimizedCheckout-headingPrimary-font");
-    font-size:18px;
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -53,6 +69,7 @@
     font-weight: stencilFontWeight("optimizedCheckout-headingSecondary-font");
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 1.15385rem;
 }
 
 //
@@ -71,7 +88,7 @@ body {
 //
 // Primary & Secondary Content
 // Text Color & Typography
-// .optimizedCheckout-contentPrimary styles body text in the Order Summary/Order Confirmation; drop-down-list items; and text that summarizes completed steps.
+// .optimizedCheckout-contentPrimary styles body text in the Order Summary/Order Confirmation drop-down-list items and text that summarizes completed steps.
 // .optimizedCheckout-contentSecondary styles check boxes' text labels, and lower-level text in the Order Summary.
 // -----------------------------------------------------------------------------
 
@@ -93,18 +110,24 @@ body {
 // Styles the CONTINUE button for each step, & the final confirmation button.
 // -----------------------------------------------------------------------------
 
-.optimizedCheckout-buttonPrimary {
+.button--primary.optimizedCheckout-buttonPrimary, .optimizedCheckout-buttonPrimary {
     background-color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColor");
     border-color: stencilColor("optimizedCheckout-buttonPrimary-borderColor");
     color: stencilColor("optimizedCheckout-buttonPrimary-color");
     font-family: stencilFontFamily("optimizedCheckout-buttonPrimary-font"), Arial, Helvetica, sans-serif;
     font-weight: stencilFontWeight("optimizedCheckout-buttonPrimary-font");
+    font-size: 1rem;
+    min-width: 255px;
 
-    &:focus,
-    &:hover {
+    &:focus, &:hover {
         background-color: stencilColor("optimizedCheckout-buttonPrimary-backgroundColorHover");
         border-color: stencilColor("optimizedCheckout-buttonPrimary-borderColorHover");
         color: stencilColor("optimizedCheckout-buttonPrimary-colorHover");
+        font-size: 1rem;
+        font-weight: normal;
+        border-width: 1px;
+        padding-top: 1rem;
+        padding-top: 1rem;
     }
 
     &:active {
@@ -112,6 +135,7 @@ body {
         border-color: stencilColor("optimizedCheckout-buttonPrimary-borderColorActive");
         color: stencilColor("optimizedCheckout-buttonPrimary-colorActive");
     }
+
 }
 
 //
@@ -126,7 +150,6 @@ body {
     color: stencilColor("optimizedCheckout-buttonSecondary-color");
     font-family: stencilFontFamily("optimizedCheckout-buttonSecondary-font"), Arial, Helvetica, sans-serif;
     font-weight: stencilFontWeight("optimizedCheckout-buttonSecondary-font");
-    
 }
 
 //
@@ -165,6 +188,7 @@ a {
     svg {
         fill: stencilColor("optimizedCheckout-step-textColor");
     }
+
 }
 
 //
@@ -194,7 +218,7 @@ a {
 // Styles discount banners.
 // -----------------------------------------------------------------------------
 
-.optimizedCheckout-discountBanner {
+.discountBanner .optimizedCheckout-discountBanner {
     background-color: stencilColor("optimizedCheckout-discountBanner-backgroundColor");
     color: stencilColor("optimizedCheckout-discountBanner-textColor");
     font-family: stencilFontFamily("optimizedCheckout-link-font"), Arial, Helvetica, sans-serif;
@@ -203,33 +227,82 @@ a {
     svg {
         fill: stencilColor("optimizedCheckout-discountBanner-iconColor");
     }
+
 }
 
 /*Custom Styles*/
-
 .ng-checkout-view {
     margin-bottom: 50px;
 }
-.form-input, .form-select{
-    border-radius:0;
+
+.form-input, .form-select {
+    border-radius: 0;
 }
-.form-select{
+
+.form-select {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
 }
-.button--primary{
-    background-color:#e64b17;
-    border-radius:0;
+
+.button--primary {
+    background-color: #e64b17;
+    border-radius: 0;
     border-color: #e64b17;
     padding-left: 2rem;
-padding-right: 2rem;
-
+    padding-right: 2rem;
 }
-.button--tertiary.button--tiny {
+
+.button--tertiary.button--tiny, .button--tertiary.button--tiny:focus, .button--tertiary.button--tiny:hover{
     text-transform: uppercase;
-    border-radius:0;
-    background-color:#7f7f7f;
-    color:#fff;
-    font-size:13px;
-    padding-left:1.8rem;
-    padding-right:1.8rem;
+    border-radius: 0;
+    background-color: #7f7f7f;
+    color: #fff;
+    font-size: 13px;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    padding-top:.85714rem;
+    padding-bottom: .85714rem;
+    border: 0;
+}
+
+.modal.is-active {
+    left: 0;
+    transform: translate(0, -50%);
+    right: 0;
+}
+
+.stepHeader-counter {
+    height: 2.69231rem !important;
+    width: 2.69231rem !important;
+}
+
+.checkout-view-content .form-body {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+}
+.icon.stepHeader-counter svg{
+    display: none;
+}
+.icon.stepHeader-counter--complete svg{
+    display: inline-block;
+    fill:#fff;
+}
+a.cart-header-link{
+    color: #4496f6;
+}
+.cart-section-heading{
+    margin:0;
+}
+.checkout-steps .form-actions{
+    width: 41.66667%;
+}
+@media (min-width:980px) {
+    .optimizedCheckout-orderSummary.cart{
+        display: block;
+    }
+}
+@media (min-width:1080px) {
+    .checkout-view-content .checkout-form {
+        margin-left: 4.19231rem;
+    }
 }

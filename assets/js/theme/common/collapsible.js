@@ -65,6 +65,8 @@ export class Collapsible {
         this.openClassName = openClassName;
         this.disabledState = disabledState;
         this.enabledState = enabledState;
+        this.$back = $('.navPages-back');
+
 
         if (disabledBreakpoint) {
             this.disabledMediaQueryList = mediaQueryListFactory(disabledBreakpoint);
@@ -78,6 +80,7 @@ export class Collapsible {
 
         // Auto-bind
         this.onClicked = this.onClicked.bind(this);
+        this.onBack = this.onBack.bind(this);
         this.onDisabledMediaQueryListMatch = this.onDisabledMediaQueryListMatch.bind(this);
 
         // Assign DOM attributes
@@ -120,6 +123,8 @@ export class Collapsible {
         this.$target
             .addClass(this.openClassName)
             .attr('aria-hidden', false);
+
+        this.$back.show();
 
         if (notify) {
             this.$toggle.trigger(CollapsibleEvents.open, [this]);
@@ -169,6 +174,7 @@ export class Collapsible {
 
     bindEvents() {
         this.$toggle.on(CollapsibleEvents.click, this.onClicked);
+        this.$back.on(CollapsibleEvents.click, this.onBack);
 
         if (this.disabledMediaQueryList && this.disabledMediaQueryList.addListener) {
             this.disabledMediaQueryList.addListener(this.onDisabledMediaQueryListMatch);
@@ -191,6 +197,13 @@ export class Collapsible {
         event.preventDefault();
 
         this.toggle();
+    }
+
+    onBack() {
+        this.$back.hide();
+        this.$back.trigger(CollapsibleEvents.close, [this]);
+        $('.navPages-action').removeClass('is-open').attr('aria-expanded', false);
+        $('.navPage-subMenu').removeClass('is-open').attr('aria-hidden', true);
     }
 
     onDisabledMediaQueryListMatch(media) {
